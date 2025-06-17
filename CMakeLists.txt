@@ -21,10 +21,9 @@ externalproject_add(EP_libfoo
 
 add_library(FOO::FOO SHARED IMPORTED)
 set_property(TARGET FOO::FOO PROPERTY IMPORTED_CONFIGURATIONS Release;RelWithDebInfo;Debug)
-set_property(TARGET FOO::FOO PROPERTY IMPORTED_LOCATION                ${INST_BASE_DIR}/Release/lib/libfoo.so)
-set_property(TARGET FOO::FOO PROPERTY IMPORTED_LOCATION_Release        ${INST_BASE_DIR}/Release/lib/libfoo.so)
-set_property(TARGET FOO::FOO PROPERTY IMPORTED_LOCATION_RelWithDebInfo ${INST_BASE_DIR}/RelWithDebInfo/lib/libfoo.so)
-set_property(TARGET FOO::FOO PROPERTY IMPORTED_LOCATION_Debug          ${INST_BASE_DIR}/Debug/lib/libfoo.so)
+set_property(TARGET FOO::FOO PROPERTY IMPORTED_LOCATION_RELEASE        ${INST_BASE_DIR}/Release/lib/libfoo.so)
+set_property(TARGET FOO::FOO PROPERTY IMPORTED_LOCATION_RELWITHDEBINFO ${INST_BASE_DIR}/RelWithDebInfo/lib/libfoo.so)
+set_property(TARGET FOO::FOO PROPERTY IMPORTED_LOCATION_DEBUG          ${INST_BASE_DIR}/Debug/lib/libfoo.so)
 
 file(MAKE_DIRECTORY ${INST_BASE_DIR}/Debug/include )
 file(MAKE_DIRECTORY ${INST_BASE_DIR}/Release/include )
